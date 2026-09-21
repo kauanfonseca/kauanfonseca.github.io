@@ -1,0 +1,21 @@
+Logos das instituições e grupos (Research groups / colaborações).
+
+PNG com fundo transparente, altura de pelo menos 200 px. Nomes sugeridos:
+
+  uerj.png  lerc.png  inpp.png  unl.png  stoich.png  ufmt.png  ecobiv.png
+
+Não recorte nem estique: o CSS normaliza a altura e preserva a proporção.
+Se o logo for escuro demais para o fundo claro do site, prefira a versão
+monocromática que a instituição publica.
+
+No .qmd:
+
+  ::: {.logo-row}
+  ![LERC](images/logos/lerc.png)
+  ![INPP](images/logos/inpp.png)
+  ![Ecosystem Stoichiometry Lab](images/logos/unl.png)
+  ![EcoBiv](images/logos/ecobiv.png)
+  :::
+
+O texto entre colchetes vira o alt (acessibilidade e leitor de tela), não
+aparece na tela.

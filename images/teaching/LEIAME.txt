@@ -1,0 +1,13 @@
+Fotos de docência (curso de campo, aulas práticas).
+
+Mesmo fluxo das outras: originais em images/originals/, roda o
+tools/prep-images.py, e copia para cá com nome descritivo, por exemplo
+ilha-grande.jpg.
+
+Cuidado com rostos de estudantes: foto de aluno identificável pede
+autorização, e em turma é mais simples escolher enquadramento de costas,
+de longe, ou focado no equipamento e no riacho.
+
+No .qmd, logo depois do título da disciplina:
+
+  ![Legenda curta](images/teaching/ilha-grande.jpg){.side-figure}

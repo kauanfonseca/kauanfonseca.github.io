@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Kauan Fonseca</title>
+<link>https://kauanfonseca.github.io/posts/</link>
+<atom:link href="https://kauanfonseca.github.io/posts/index.xml" rel="self" type="application/rss+xml"/>
+<description>Ecosystem ecology of aquatic and freshwater systems: carbon and nutrient cycling, karst streams, and the organisms that drive them.</description>
+<generator>quarto-1.6.42</generator>
+<lastBuildDate>Thu, 17 Sep 2026 03:00:00 GMT</lastBuildDate>
+<item>
+  <title>How this site is built</title>
+  <link>https://kauanfonseca.github.io/posts/2026-09-17-how-this-site-is-built/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Academic pages are usually a PDF CV and a list of links. This one is a Quarto project: the same toolchain I use for analysis reports, pointed at a website. The practical consequence is that a figure here is never a screenshot — it is code that runs at build time, and if the underlying data changes, the figure changes with the next push.</p>
+<section id="the-stack" class="level2">
+<h2 class="anchored" data-anchor-id="the-stack">The stack</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 33%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Layer</th>
+<th>Tool</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Content</td>
+<td>Quarto <code>.qmd</code></td>
+<td>Markdown plus executable R chunks</td>
+</tr>
+<tr class="even">
+<td>Analysis</td>
+<td>R, tidyverse</td>
+<td>The language the actual work is done in</td>
+</tr>
+<tr class="odd">
+<td>Interactive figures</td>
+<td>Plotly, Leaflet, DT</td>
+<td>Zoom, hover and layers without a server</td>
+</tr>
+<tr class="even">
+<td>Client-side interaction</td>
+<td>Observable JS</td>
+<td>Sliders that recompute in the browser</td>
+</tr>
+<tr class="odd">
+<td>Build</td>
+<td>GitHub Actions</td>
+<td>Renders on every push to <code>main</code></td>
+</tr>
+<tr class="even">
+<td>Hosting</td>
+<td>GitHub Pages</td>
+<td>Static, free, versioned</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-part-worth-copying" class="level2">
+<h2 class="anchored" data-anchor-id="the-part-worth-copying">The part worth copying</h2>
+<p><code>execute: freeze: auto</code> in <code>_quarto.yml</code> caches chunk results in <code>_freeze/</code>. Commit that directory and the build runner never has to install R or restore packages: it serves the cached output and renders the HTML. Builds drop from several minutes to a few seconds, and a package update upstream cannot silently change a published figure.</p>
+<p>The trade-off is that you re-render locally when data changes, and commit the cache along with the code. For a site whose figures come out of a dissertation pipeline, that is the right direction: the published version should change when I decide it changes, not when CRAN does.</p>
+</section>
+<section id="client-side-not-shiny" class="level2">
+<h2 class="anchored" data-anchor-id="client-side-not-shiny">Client-side, not Shiny</h2>
+<p>Shiny needs a server. Observable JS does not: <code>ojs_define()</code> writes an R object into the page as JSON, and the browser does the rest. Every interactive control on the <a href="../../research.html">Research</a> page works from a static file, which is why the whole site fits on GitHub Pages at no cost.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>quarto</category>
+  <category>R</category>
+  <category>reproducibility</category>
+  <guid>https://kauanfonseca.github.io/posts/2026-09-17-how-this-site-is-built/</guid>
+  <pubDate>Thu, 17 Sep 2026 03:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,296 @@
+[
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum vitae",
+    "section": "",
+    "text": "Academic CV (PDF) · Consulting CV (PDF) · Plataforma Lattes"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Curriculum vitae",
+    "section": "Education",
+    "text": "Education\n\n\n2021 – 2026\nPhD, Ecology and Evolution — Universidade do Estado do Rio de Janeiro (UERJ). Advisor: Dr. Eugenia Zandonà.\n\n\n2019 – 2021\nMSc, Biodiversity (Ecology) — Universidade Federal do Estado do Rio de Janeiro (UNIRIO). Advisor: Dr. Timothy P. Moulton.\n\n\n2015 – 2019\nBSc, Biological Sciences — Universidade Federal de Mato Grosso (UFMT). Undergraduate advisor: Dr. Cassia Yano."
+  },
+  {
+    "objectID": "cv.html#awards-and-funding",
+    "href": "cv.html#awards-and-funding",
+    "title": "Curriculum vitae",
+    "section": "Awards and funding",
+    "text": "Awards and funding\n\n\n\n\n\n\n\nYear\nAward\n\n\n\n\n2025\nEndowment Award, Society for Freshwater Science (USD 2,000)\n\n\n2024\nCAPES-PrInt fellowship for a research stay abroad (USD 21,400)\n\n\n2024\nStoich Project Travel Award (USD 1,000)\n\n\n2023\nConference on Biological Stoichiometry Travel Award (USD 2,000)\n\n\n2022\nAmerican Fund Award, Society for Freshwater Science (USD 1,500)"
+  },
+  {
+    "objectID": "cv.html#service-and-membership",
+    "href": "cv.html#service-and-membership",
+    "title": "Curriculum vitae",
+    "section": "Service and membership",
+    "text": "Service and membership\n\nInternational Coordination Committee (ICC), Society for Freshwater Science.\nMember, Society for Freshwater Science; Association for the Sciences of Limnology and Oceanography."
+  },
+  {
+    "objectID": "cv.html#technical-skills",
+    "href": "cv.html#technical-skills",
+    "title": "Curriculum vitae",
+    "section": "Technical skills",
+    "text": "Technical skills\n\n\n\n\n\n\n\nArea\nTools\n\n\n\n\nAnalysis\nR: tidyverse, data wrangling, statistics\n\n\nEcosystem modelling\nstreamMetabolizer, LakeMetabolizer, PHREEQC\n\n\nInverse and transport modelling\nReacTran, deSolve, FME\n\n\nSpatial\nsf\n\n\nVisualisation\nggplot2, plotly, leaflet\n\n\nReporting\nQuarto, R Markdown, LaTeX\n\n\nWorkflow\nGit, GitHub, GitHub Pages and Actions\n\n\nSpreadsheets\nExcel, including validation and reporting workflows"
+  },
+  {
+    "objectID": "cv.html#languages",
+    "href": "cv.html#languages",
+    "title": "Curriculum vitae",
+    "section": "Languages",
+    "text": "Languages\nPortuguese (native) · English (B2) · Spanish (A1)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About me",
+    "section": "",
+    "text": "I hold a PhD in Ecology and Evolution from the Universidade do Estado do Rio de Janeiro (UERJ), Brazil. My dissertation dealt with karst streams in the Brazilian savanna, in Mato Grosso (see map below), where I investigated how biodiversity modulates the structure and functioning of these ecosystems. I have also worked on environmental consultancy projects in the Amazon and Atlantic Forest regions, evaluating the effects of mining and hydropower development on aquatic communities. I am currently an associate fellow at the Instituto Nacional de Pesquisas do Pantanal (INPP), supported by a CNPq PCI-DB fellowship, and a postdoctoral researcher at UERJ.\n\n\n\n\n\n\n\n\n\nMy study area in region of Mato Grosso, Brazil. Circles are sampling sites area, squares are logistical support (field station and laboratory), the triangle is the state capital."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About me",
+    "section": "",
+    "text": "I hold a PhD in Ecology and Evolution from the Universidade do Estado do Rio de Janeiro (UERJ), Brazil. My dissertation dealt with karst streams in the Brazilian savanna, in Mato Grosso (see map below), where I investigated how biodiversity modulates the structure and functioning of these ecosystems. I have also worked on environmental consultancy projects in the Amazon and Atlantic Forest regions, evaluating the effects of mining and hydropower development on aquatic communities. I am currently an associate fellow at the Instituto Nacional de Pesquisas do Pantanal (INPP), supported by a CNPq PCI-DB fellowship, and a postdoctoral researcher at UERJ.\n\n\n\n\n\n\n\n\n\nMy study area in region of Mato Grosso, Brazil. Circles are sampling sites area, squares are logistical support (field station and laboratory), the triangle is the state capital."
+  },
+  {
+    "objectID": "about.html#research-interests",
+    "href": "about.html#research-interests",
+    "title": "About me",
+    "section": "Research interests",
+    "text": "Research interests\n\nStructure and functioning of aquatic and freshwater ecosystems\nCarbon and nutrient cycling, and the role of organisms in driving it\nKarst aquatic ecosystems and calcium carbonate precipitation\nStream ecosystem responses to environmental change\nField campaigns paired with manipulative experiments"
+  },
+  {
+    "objectID": "about.html#where-i-want-to-take-this",
+    "href": "about.html#where-i-want-to-take-this",
+    "title": "About me",
+    "section": "Where I want to take this",
+    "text": "Where I want to take this\nTwo directions I want to build toward: long-term monitoring of the streams I currently sample campaign by campaign, and scaling the questions beyond single catchments."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Kauan Fonseca",
+    "section": "",
+    "text": "ORCID\n  \n  \n    \n     Lattes\n  \n  \n    \n     GitHub\n  \n  \n    \n     Contact\n  \n\n  \n  \nI am an ecosystem ecologist interested in the biotic and environmental factors that control the structure and functioning of ecosystems, especially aquatic and freshwater ones. I work at the reach and catchment scale, combining field campaigns with manipulative experiments to evaluate how streams respond to environmental change.\nI work on carbon and nutrient cycling and on the role of organisms in driving these processes, with a particular interest in karst aquatic ecosystems — where calcium carbonate precipitates — and in how organisms affect, and are affected by, these systems."
+  },
+  {
+    "objectID": "index.html#where-to-go-from-here",
+    "href": "index.html#where-to-go-from-here",
+    "title": "Kauan Fonseca",
+    "section": "Where to go from here",
+    "text": "Where to go from here\n\n\n\n\n\n\n\nAbout\nBackground, research interests and where the work happens\n\n\nResearch\nProjects, study region, groups and collaborations\n\n\nField\nPhotographs from the streams and the fieldwork\n\n\nPublications\nPeer-reviewed articles and software\n\n\nTeaching\nCourses, mentorship and outreach\n\n\nCV\nAcademic and consulting CV, Lattes\n\n\nContact\nEmail, academic profiles and collaboration"
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Field notes",
+    "section": "",
+    "text": "How this site is built\n\n\n\n\n\n\nquarto\n\n\nR\n\n\nreproducibility\n\n\n\nQuarto, R, Plotly and Observable JS, rendered by GitHub Actions and served from GitHub Pages. No server, no database, every figure reproducible from the source in the repository. \n\n\n\n\n\nSep 17, 2026\n\n\n2 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "The quickest route is email. Fill this in and pick how you want to send it: nothing is stored on this site and no third party sees the message.\n\n  Subject\n    \n  \n  Message\n    \n  \n  \n    Open in my mail app\n    Open in Gmail\n    Copy address\n  \n  \n\n\n\nOr write directly to n.kauan@gmail.com."
+  },
+  {
+    "objectID": "contact.html#write-to-me",
+    "href": "contact.html#write-to-me",
+    "title": "Contact",
+    "section": "",
+    "text": "The quickest route is email. Fill this in and pick how you want to send it: nothing is stored on this site and no third party sees the message.\n\n  Subject\n    \n  \n  Message\n    \n  \n  \n    Open in my mail app\n    Open in Gmail\n    Copy address\n  \n  \n\n\n\nOr write directly to n.kauan@gmail.com."
+  },
+  {
+    "objectID": "contact.html#academic-profiles",
+    "href": "contact.html#academic-profiles",
+    "title": "Contact",
+    "section": "Academic profiles",
+    "text": "Academic profiles\n\n\n\n\n\n\n\nORCID\n0000-0003-4728-4883\n\n\nLattes\nlattes.cnpq.br/8766670248298603\n\n\nGitHub\nkauanfonseca"
+  },
+  {
+    "objectID": "contact.html#where-i-work",
+    "href": "contact.html#where-i-work",
+    "title": "Contact",
+    "section": "Where I work",
+    "text": "Where I work\nPostdoctoral researcher at the LERC, Stream Ecology Lab, Department of Ecology, Universidade do Estado do Rio de Janeiro (UERJ), Rio de Janeiro, and associate fellow at the Instituto Nacional de Pesquisa do Pantanal (INPP)."
+  },
+  {
+    "objectID": "contact.html#collaboration",
+    "href": "contact.html#collaboration",
+    "title": "Contact",
+    "section": "Collaboration",
+    "text": "Collaboration\nI am open to collaboration across aquatic ecology and biogeochemistry, and happy to be approached about work that sits outside what is described on this site. Stream metabolism, solute additions, consumer-driven nutrient recycling and biomonitoring are where I can contribute most quickly, but a dataset nobody has had time to analyse, a method that needs a second pair of eyes, or an idea at the stage of a conversation are all welcome.\nSuggestions about the site itself are welcome too, including where it is unclear or wrong."
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "A reach on Ilha Grande during the course: measurements taken where the questions are.\n\n\nInvited lecturer on a graduate field course in stream and river ecology, for MSc and PhD students, held on Ilha Grande, Rio de Janeiro. Classes run both in the room and in the streams themselves: students measure, sample and argue about what the numbers mean while standing in the water.\n\n\n\nWorking a step-pool sequence.\n\n\n\n\n\n\nTeaching assistant on an undergraduate course covering population, community and ecosystem ecology, with the practical sessions built around data analysis in R."
+  },
+  {
+    "objectID": "teaching.html#courses",
+    "href": "teaching.html#courses",
+    "title": "Teaching",
+    "section": "",
+    "text": "A reach on Ilha Grande during the course: measurements taken where the questions are.\n\n\nInvited lecturer on a graduate field course in stream and river ecology, for MSc and PhD students, held on Ilha Grande, Rio de Janeiro. Classes run both in the room and in the streams themselves: students measure, sample and argue about what the numbers mean while standing in the water.\n\n\n\nWorking a step-pool sequence.\n\n\n\n\n\n\nTeaching assistant on an undergraduate course covering population, community and ecosystem ecology, with the practical sessions built around data analysis in R."
+  },
+  {
+    "objectID": "teaching.html#mentorship",
+    "href": "teaching.html#mentorship",
+    "title": "Teaching",
+    "section": "Mentorship",
+    "text": "Mentorship\nBetween 2022 and 2025 I supervised three undergraduate students at the Universidade Federal de Mato Grosso on projects in freshwater mussel ecology and ecosystem ecology. Two of those projects were presented as first-authored posters at conferences. Names and dates are in the CV."
+  },
+  {
+    "objectID": "teaching.html#outreach",
+    "href": "teaching.html#outreach",
+    "title": "Teaching",
+    "section": "Outreach",
+    "text": "Outreach\n\n2024 — Educator at a workshop and public event of Sesc Pantanal, on water quality and the role of biodiversity in Cerrado and Pantanal streams.\n2023 — Educator at the Enduro a Pé event, Parque Sesc Serra Azul, on stream and river ecology and biodiversity.\n2023 — Interactive workshops on freshwater ecology and stream conservation for public-school students in Rio de Janeiro.\n2022 — Volunteer educator with public-school students in Rio de Janeiro: hands-on activities on stream ecosystems and aquatic biodiversity."
+  },
+  {
+    "objectID": "teaching.html#teaching-material",
+    "href": "teaching.html#teaching-material",
+    "title": "Teaching",
+    "section": "Teaching material",
+    "text": "Teaching material"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "Actively precipitating travertine barrier.\n\n\nTravertine streams deposit CaCO3 as they degas CO2, but the same water is simultaneously worked on by photosynthesis and respiration, which draw down and release dissolved inorganic carbon and shift pH. Biological and geochemical control of carbonate chemistry are therefore entangled: a dissolved-oxygen or pH record carries both signals at once. How much of the carbonate signal metabolism actually accounts for remains open, and almost unexamined in tropical streams with high biodiversity. The answer bears on a larger question: what fraction of riverine CO2 emission is metabolic rather than geochemical.\n\nStream metabolism Carbonate chemistry High-frequency sensors\n\n\n\n\n\n\nSetting up the downstream station to collect samples during a slug addition.\n\n\nPhosphorus co-precipitates with CaCO3, so travertine streams tend to be P-limited and the limitation is in part self-inflicted: the calcite that photosynthesis helps precipitate scavenges the phosphorus the same community depends on. Whether that feedback acts as a constraint or an opportunity for stream organisms is the question driving this project. We are measuring how much nitrogen and phosphorus these streams retain, and how biological and geochemical processes interact to set nutrient availability, using paired conservative-tracer and nutrient slug additions across a gradient of karst influence. Deconvolving the breakthrough curves separates uptake from transport, yielding nutrient assimilation and partitioning retention between the main channel and hyporheic zone.\n\nSolute transport Nutrient uptake\n\n\n\n\n\n\nExcretion incubation: a fish held in a bag of filtered stream water while nutrients accumulate.\n\n\nKarst headwater streams in the Cerrado–Pantanal ecotone hold on the order of 350 fish species, often in dense aggregations. In these oligotrophic ecosystems, animal excretion can be a meaningful supply of dissolved nitrogen and phosphorus, and the amount supplied and its N:P ratio depend on the biomass, functional traits and taxonomic composition of the assemblage. Because excreta are released in dissolved and particulate forms with different stoichiometry, consumers can fuel autotrophic and heterotrophic pathways unequally, shifting the balance between primary production and respiration. That shift reaches back into the carbonate system: by altering CO2 demand, pH and carbonate saturation, consumer aggregations may regulate travertine formation from the top of the food web.\n\n\n\n\n\n\nReach downstream of a hydropower dam, one of the settings monitored under environmental licensing.\n\n\nSince 2022 I have worked as an environmental consultant at LED Consultoria Ambiental, designing and running hydrochemical and biological monitoring programmes for impact assessment and environmental licensing in Pará and in Atlantic Forest–Cerrado rivers. The work runs from field campaigns under QA/QC and sample-traceability protocols, through the analysis of phytoplankton, zooplankton, benthic macroinvertebrate and fish data, to the hydrochemical and biological indicators that describe the condition of a freshwater system for the regulator. The deliverable is a report; the product is a versioned, re-runnable pipeline in R that validates the raw laboratory spreadsheets, builds the figures and carries them through to the client’s final format, keeping inconsistencies and regulatory non-compliance out of the document.\n\nBenthic macroinvertebrates Water quality Reporting pipelines"
+  },
+  {
+    "objectID": "research.html#current-projects",
+    "href": "research.html#current-projects",
+    "title": "Research",
+    "section": "",
+    "text": "Actively precipitating travertine barrier.\n\n\nTravertine streams deposit CaCO3 as they degas CO2, but the same water is simultaneously worked on by photosynthesis and respiration, which draw down and release dissolved inorganic carbon and shift pH. Biological and geochemical control of carbonate chemistry are therefore entangled: a dissolved-oxygen or pH record carries both signals at once. How much of the carbonate signal metabolism actually accounts for remains open, and almost unexamined in tropical streams with high biodiversity. The answer bears on a larger question: what fraction of riverine CO2 emission is metabolic rather than geochemical.\n\nStream metabolism Carbonate chemistry High-frequency sensors\n\n\n\n\n\n\nSetting up the downstream station to collect samples during a slug addition.\n\n\nPhosphorus co-precipitates with CaCO3, so travertine streams tend to be P-limited and the limitation is in part self-inflicted: the calcite that photosynthesis helps precipitate scavenges the phosphorus the same community depends on. Whether that feedback acts as a constraint or an opportunity for stream organisms is the question driving this project. We are measuring how much nitrogen and phosphorus these streams retain, and how biological and geochemical processes interact to set nutrient availability, using paired conservative-tracer and nutrient slug additions across a gradient of karst influence. Deconvolving the breakthrough curves separates uptake from transport, yielding nutrient assimilation and partitioning retention between the main channel and hyporheic zone.\n\nSolute transport Nutrient uptake\n\n\n\n\n\n\nExcretion incubation: a fish held in a bag of filtered stream water while nutrients accumulate.\n\n\nKarst headwater streams in the Cerrado–Pantanal ecotone hold on the order of 350 fish species, often in dense aggregations. In these oligotrophic ecosystems, animal excretion can be a meaningful supply of dissolved nitrogen and phosphorus, and the amount supplied and its N:P ratio depend on the biomass, functional traits and taxonomic composition of the assemblage. Because excreta are released in dissolved and particulate forms with different stoichiometry, consumers can fuel autotrophic and heterotrophic pathways unequally, shifting the balance between primary production and respiration. That shift reaches back into the carbonate system: by altering CO2 demand, pH and carbonate saturation, consumer aggregations may regulate travertine formation from the top of the food web.\n\n\n\n\n\n\nReach downstream of a hydropower dam, one of the settings monitored under environmental licensing.\n\n\nSince 2022 I have worked as an environmental consultant at LED Consultoria Ambiental, designing and running hydrochemical and biological monitoring programmes for impact assessment and environmental licensing in Pará and in Atlantic Forest–Cerrado rivers. The work runs from field campaigns under QA/QC and sample-traceability protocols, through the analysis of phytoplankton, zooplankton, benthic macroinvertebrate and fish data, to the hydrochemical and biological indicators that describe the condition of a freshwater system for the regulator. The deliverable is a report; the product is a versioned, re-runnable pipeline in R that validates the raw laboratory spreadsheets, builds the figures and carries them through to the client’s final format, keeping inconsistencies and regulatory non-compliance out of the document.\n\nBenthic macroinvertebrates Water quality Reporting pipelines"
+  },
+  {
+    "objectID": "research.html#study-sites",
+    "href": "research.html#study-sites",
+    "title": "Research",
+    "section": "Study sites",
+    "text": "Study sites\n\n\n\n\n\n\n\nMy study area in region of Mato Grosso, Brazil. Circles are sampling sites area, squares are logistical support (field station and laboratory), the triangle is the state capital."
+  },
+  {
+    "objectID": "research.html#research-groups",
+    "href": "research.html#research-groups",
+    "title": "Research",
+    "section": "Research groups",
+    "text": "Research groups\nLERC, Stream Ecology Lab, Universidade do Estado do Rio de Janeiro. Led by Dr. Eugenia Zandonà, Dr. Vinicius Neres-Lima, and Dr. Timothy P. Moulton. It is where my doctoral work was done and where I am currently a postdoctoral researcher.\nInstituto Nacional de Pesquisa do Pantanal (INPP). Associate fellow under a CNPq PCI-DB fellowship, in the Wetland and Ecosystem Ecology line, working on biodiversity monitoring of wetland vertebrates.\nEcosystem Stoichiometry Lab, University of Nebraska–Lincoln, and the Stoich Project. Collaboration with Dr. Jessica Corman on travertine streams in Arizona, New Mexico and Mato Grosso, including fieldwork in the United States during a CAPES-PrInt fellowship, and on other studies in ecological stoichiometry.\nEcoBiv, Universidade Federal de Mato Grosso. Laboratório de Ecologia e Conservação de Bivalves, led by Dr. Rogério dos Santos, on freshwater mussel ecology. It is also where I co-mentored undergraduate students."
+  },
+  {
+    "objectID": "posts/2026-09-17-how-this-site-is-built/index.html",
+    "href": "posts/2026-09-17-how-this-site-is-built/index.html",
+    "title": "How this site is built",
+    "section": "",
+    "text": "Academic pages are usually a PDF CV and a list of links. This one is a Quarto project: the same toolchain I use for analysis reports, pointed at a website. The practical consequence is that a figure here is never a screenshot — it is code that runs at build time, and if the underlying data changes, the figure changes with the next push."
+  },
+  {
+    "objectID": "posts/2026-09-17-how-this-site-is-built/index.html#the-stack",
+    "href": "posts/2026-09-17-how-this-site-is-built/index.html#the-stack",
+    "title": "How this site is built",
+    "section": "The stack",
+    "text": "The stack\n\n\n\n\n\n\n\n\nLayer\nTool\nWhy\n\n\n\n\nContent\nQuarto .qmd\nMarkdown plus executable R chunks\n\n\nAnalysis\nR, tidyverse\nThe language the actual work is done in\n\n\nInteractive figures\nPlotly, Leaflet, DT\nZoom, hover and layers without a server\n\n\nClient-side interaction\nObservable JS\nSliders that recompute in the browser\n\n\nBuild\nGitHub Actions\nRenders on every push to main\n\n\nHosting\nGitHub Pages\nStatic, free, versioned"
+  },
+  {
+    "objectID": "posts/2026-09-17-how-this-site-is-built/index.html#the-part-worth-copying",
+    "href": "posts/2026-09-17-how-this-site-is-built/index.html#the-part-worth-copying",
+    "title": "How this site is built",
+    "section": "The part worth copying",
+    "text": "The part worth copying\nexecute: freeze: auto in _quarto.yml caches chunk results in _freeze/. Commit that directory and the build runner never has to install R or restore packages: it serves the cached output and renders the HTML. Builds drop from several minutes to a few seconds, and a package update upstream cannot silently change a published figure.\nThe trade-off is that you re-render locally when data changes, and commit the cache along with the code. For a site whose figures come out of a dissertation pipeline, that is the right direction: the published version should change when I decide it changes, not when CRAN does."
+  },
+  {
+    "objectID": "posts/2026-09-17-how-this-site-is-built/index.html#client-side-not-shiny",
+    "href": "posts/2026-09-17-how-this-site-is-built/index.html#client-side-not-shiny",
+    "title": "How this site is built",
+    "section": "Client-side, not Shiny",
+    "text": "Client-side, not Shiny\nShiny needs a server. Observable JS does not: ojs_define() writes an R object into the page as JSON, and the browser does the rest. Every interactive control on the Research page works from a static file, which is why the whole site fits on GitHub Pages at no cost."
+  },
+  {
+    "objectID": "field.html",
+    "href": "field.html",
+    "title": "Field",
+    "section": "",
+    "text": "photos = transpose(photos_raw)\n\ncategories = [\"All\", ...new Set(photos.map(d =&gt; d.category).filter(d =&gt; d))]\n\nviewof cat = Inputs.radio(categories, {value: \"All\", label: \"Show\"})\nviewof query = Inputs.search(photos, {\n  placeholder: \"Search captions, sites…\",\n  columns: [\"caption\", \"site\", \"year\"],\n  label: \"Filter\"\n})\n\nshown = query.filter(d =&gt; cat === \"All\" || d.category === cat)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof opened = {\n  const wrap = html`&lt;div&gt;&lt;/div&gt;`;\n  let current = null;\n\n  const legend = d =&gt; [d.caption, d.site, d.year].filter(x =&gt; x && x !== \"TODO\")\n    .join(\" · \");\n\n  const overlay = html`&lt;div class=\"photo-overlay\" style=\"display:none\"&gt;\n    &lt;button class=\"photo-close\" title=\"Close\"&gt;&times;&lt;/button&gt;\n    &lt;button class=\"photo-prev\" title=\"Previous\"&gt;&#8249;&lt;/button&gt;\n    &lt;button class=\"photo-next\" title=\"Next\"&gt;&#8250;&lt;/button&gt;\n    &lt;figure&gt;&lt;img src=\"\"&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;\n  &lt;/div&gt;`;\n\n  const img = overlay.querySelector(\"img\");\n  const cap = overlay.querySelector(\"figcaption\");\n\n  function show(i) {\n    current = (i + shown.length) % shown.length;\n    const d = shown[current];\n    img.src = d.path;\n    cap.textContent = legend(d);\n    overlay.style.display = \"flex\";\n  }\n  function hide() { overlay.style.display = \"none\"; current = null; }\n\n  overlay.querySelector(\".photo-close\").onclick = hide;\n  overlay.querySelector(\".photo-prev\").onclick = e =&gt; { e.stopPropagation(); show(current - 1); };\n  overlay.querySelector(\".photo-next\").onclick = e =&gt; { e.stopPropagation(); show(current + 1); };\n  overlay.onclick = e =&gt; { if (e.target === overlay) hide(); };\n  d3.select(document.body).on(\"keydown.gallery\", e =&gt; {\n    if (current === null) return;\n    if (e.key === \"Escape\") hide();\n    if (e.key === \"ArrowRight\") show(current + 1);\n    if (e.key === \"ArrowLeft\") show(current - 1);\n  });\n\n  const grid = html`&lt;div class=\"photo-grid\"&gt;\n    ${shown.map((d, i) =&gt; {\n      const fig = html`&lt;figure&gt;\n        &lt;img src=\"${d.path}\" alt=\"${d.caption}\" loading=\"lazy\"&gt;\n        &lt;figcaption&gt;${legend(d)}&lt;/figcaption&gt;\n      &lt;/figure&gt;`;\n      fig.onclick = () =&gt; show(i);\n      return fig;\n    })}\n  &lt;/div&gt;`;\n\n  wrap.append(grid, overlay);\n  wrap.value = null;\n  return wrap;\n}\n\n\n\n\n\n\n\nhtml`&lt;p class=\"figure-caption\"&gt;${shown.length} of ${photos.length} photographs.\nClick any image to open it; use the arrow keys to move through the set.&lt;br&gt;\nAll photographs © Kauan Fonseca. Please ask before reusing them.&lt;/p&gt;`"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Talks, posters and work in preparation are on the CV."
+  },
+  {
+    "objectID": "publications.html#peer-reviewed-articles",
+    "href": "publications.html#peer-reviewed-articles",
+    "title": "Publications",
+    "section": "Peer-reviewed articles",
+    "text": "Peer-reviewed articles\n\nEnvironmental filtering outweighs resource stoichiometry in macroinvertebrate community stoichiometry across North America\nTomczyk, N., Smith, C., Nessel, M., Fonseca, K., Bravo, V., Corman, J., Moody, E., & Halvorson, H.. Freshwater Science (2026).\nPublished 10.1086/743968\n\n\nLinking functional responses and effects with stoichiometric traits\nMoody, E. K., Anania, K., Boersma, K. S., Butts, T. J., Corman, J. R., Cruz, S., Farrell, W. R., Fonseca, K. N., et al.. Ecology 106(4): e70080 (2025).\nPublished 10.1002/ecy.70080\n\n\nFirst report of the invasive Ceratium furcoides in Paracambi Reservoir, RJ\nCorrêa, R. F., Macedo, R. L., Fonseca, K. N., Thiago, M. G. R., Miranda, V. B. S., Orsi, M. L., Portugal, S. G. M., & Branco, C. W. C.. Lakes & Reservoirs: Research & Management 27: e12400 (2022).\nPublished 10.1111/lre.12400"
+  },
+  {
+    "objectID": "publications.html#software",
+    "href": "publications.html#software",
+    "title": "Publications",
+    "section": "Software",
+    "text": "Software\n\nStreamLog\nA single-file HTML logger for multiparameter sonde readings in the field: range checks as you type, CSV export, and no dependency on signal, battery- hungry apps or a laptop. It runs offline in any browser, including a phone held over a stream.\nOpen in a new tab Source code 10.5281/zenodo.22784736 MIT licence\n\n\n\n\nThe version above is live, not a screenshot: type a reading and it validates. Nothing you enter here is stored anywhere."
+  },
+  {
+    "objectID": "LEIAME-site.html",
+    "href": "LEIAME-site.html",
+    "title": "kauanfonseca.github.io",
+    "section": "",
+    "text": "Personal research site built with Quarto, R, Plotly, Leaflet and Observable JS, published to GitHub Pages by GitHub Actions.\n\n\n# 1. Quarto CLI (once): https://quarto.org/docs/get-started/\nquarto check\n\n# 2. R packages\nRscript R/00-bootstrap.R\n\n# 3. Live preview at http://localhost:4200\nquarto preview\n\n\n\n\nCreate a repository named &lt;your-username&gt;.github.io and push this folder to the main branch.\nIn Settings &gt; Pages, set the source to Deploy from a branch, branch gh-pages, folder / (root).\nPush to main. The workflow in .github/workflows/publish.yml renders the site and force-pushes the output to gh-pages.\n\nThe first run also creates the gh-pages branch. If you prefer to publish from your own machine instead, run quarto publish gh-pages and delete the workflow file.\n\n\n\nexecute.freeze: auto in _quarto.yml caches chunk output. Commit the _freeze/ directory: the runner then serves cached results and never needs R installed, which makes builds fast and immune to package drift. If you commit _freeze/, you can delete the three R setup steps in the workflow.\n\n\n\nThis scaffold ships with placeholders and synthetic data so that it renders on a clean machine. None of it should go live under your name unchecked.\n\n\n\n\n\n\n\nItem\nStatus\n\n\n\n\ndata/example_btc.csv\nSynthetic. Generated to demonstrate the BTC code path. Swap in a real event or keep it and leave the “synthetic input, real model” note in place.\n\n\ndata/sites.csv\nEmpty. Site codes only; fill in coordinates, width and discharge. The map hides itself until lat/lon exist.\n\n\ndata/publications.csv\nReal entries, but check the status wording before it is public.\n\n\nDiel oxygen figure\nForward model on synthetic input; labelled as such in a callout.\n\n\nreferences.bib\nOnly the StreamLog Zenodo record. Paste real BibTeX from publishers or DOIs; do not let a placeholder citation reach the live site.\n\n\ncv.qmd\nInstitutions, dates, advisor and service section are CHANGE_ME.\n\n\nEmail / Scholar / ORCID / Lattes\nexample.org and CHANGE_ME in _quarto.yml and index.qmd.\n\n\nimages/profile.jpg, images/favicon.png\nPlaceholder images.\n\n\ncv/kauan-fonseca-cv.pdf\nMissing; the CV page links to it.\n\n\n\nFastest way to find everything left to edit:\ngrep -rn \"CHANGE_ME\\|example.org\\|FILL IN\" --include=\"*.qmd\" --include=\"*.yml\" .\n\n\n\n\n\n\nFile\nWhat to change\n\n\n\n\n_quarto.yml\nsite-url, repo-url, email, GitHub handle\n\n\nindex.qmd\nScholar / ORCID / Lattes URLs, bio text\n\n\nimages/profile.jpg\nYour photo (square, at least 600 px)\n\n\nimages/favicon.png\n64x64 icon\n\n\nresearch.qmd\nReal site coordinates in the sites tibble\n\n\nreferences.bib\nYour actual references\n\n\ncv.qmd\nInstitutions, dates, advisor\n\n\ncv/kauan-fonseca-cv.pdf\nYour PDF CV\n\n\n\n\n\n\nmkdir -p posts/2026-10-01-short-slug\n$EDITOR posts/2026-10-01-short-slug/index.qmd\nGive it title, description, date, categories and an image in the YAML header; the listing on posts/index.qmd picks it up automatically."
+  },
+  {
+    "objectID": "LEIAME-site.html#local-setup",
+    "href": "LEIAME-site.html#local-setup",
+    "title": "kauanfonseca.github.io",
+    "section": "",
+    "text": "# 1. Quarto CLI (once): https://quarto.org/docs/get-started/\nquarto check\n\n# 2. R packages\nRscript R/00-bootstrap.R\n\n# 3. Live preview at http://localhost:4200\nquarto preview"
+  },
+  {
+    "objectID": "LEIAME-site.html#publishing",
+    "href": "LEIAME-site.html#publishing",
+    "title": "kauanfonseca.github.io",
+    "section": "",
+    "text": "Create a repository named &lt;your-username&gt;.github.io and push this folder to the main branch.\nIn Settings &gt; Pages, set the source to Deploy from a branch, branch gh-pages, folder / (root).\nPush to main. The workflow in .github/workflows/publish.yml renders the site and force-pushes the output to gh-pages.\n\nThe first run also creates the gh-pages branch. If you prefer to publish from your own machine instead, run quarto publish gh-pages and delete the workflow file."
+  },
+  {
+    "objectID": "LEIAME-site.html#caching-_freeze",
+    "href": "LEIAME-site.html#caching-_freeze",
+    "title": "kauanfonseca.github.io",
+    "section": "",
+    "text": "execute.freeze: auto in _quarto.yml caches chunk output. Commit the _freeze/ directory: the runner then serves cached results and never needs R installed, which makes builds fast and immune to package drift. If you commit _freeze/, you can delete the three R setup steps in the workflow."
+  },
+  {
+    "objectID": "LEIAME-site.html#before-you-publish-what-is-real-and-what-is-not",
+    "href": "LEIAME-site.html#before-you-publish-what-is-real-and-what-is-not",
+    "title": "kauanfonseca.github.io",
+    "section": "",
+    "text": "This scaffold ships with placeholders and synthetic data so that it renders on a clean machine. None of it should go live under your name unchecked.\n\n\n\n\n\n\n\nItem\nStatus\n\n\n\n\ndata/example_btc.csv\nSynthetic. Generated to demonstrate the BTC code path. Swap in a real event or keep it and leave the “synthetic input, real model” note in place.\n\n\ndata/sites.csv\nEmpty. Site codes only; fill in coordinates, width and discharge. The map hides itself until lat/lon exist.\n\n\ndata/publications.csv\nReal entries, but check the status wording before it is public.\n\n\nDiel oxygen figure\nForward model on synthetic input; labelled as such in a callout.\n\n\nreferences.bib\nOnly the StreamLog Zenodo record. Paste real BibTeX from publishers or DOIs; do not let a placeholder citation reach the live site.\n\n\ncv.qmd\nInstitutions, dates, advisor and service section are CHANGE_ME.\n\n\nEmail / Scholar / ORCID / Lattes\nexample.org and CHANGE_ME in _quarto.yml and index.qmd.\n\n\nimages/profile.jpg, images/favicon.png\nPlaceholder images.\n\n\ncv/kauan-fonseca-cv.pdf\nMissing; the CV page links to it.\n\n\n\nFastest way to find everything left to edit:\ngrep -rn \"CHANGE_ME\\|example.org\\|FILL IN\" --include=\"*.qmd\" --include=\"*.yml\" ."
+  },
+  {
+    "objectID": "LEIAME-site.html#files-to-replace-before-going-live",
+    "href": "LEIAME-site.html#files-to-replace-before-going-live",
+    "title": "kauanfonseca.github.io",
+    "section": "",
+    "text": "File\nWhat to change\n\n\n\n\n_quarto.yml\nsite-url, repo-url, email, GitHub handle\n\n\nindex.qmd\nScholar / ORCID / Lattes URLs, bio text\n\n\nimages/profile.jpg\nYour photo (square, at least 600 px)\n\n\nimages/favicon.png\n64x64 icon\n\n\nresearch.qmd\nReal site coordinates in the sites tibble\n\n\nreferences.bib\nYour actual references\n\n\ncv.qmd\nInstitutions, dates, advisor\n\n\ncv/kauan-fonseca-cv.pdf\nYour PDF CV"
+  },
+  {
+    "objectID": "LEIAME-site.html#adding-a-post",
+    "href": "LEIAME-site.html#adding-a-post",
+    "title": "kauanfonseca.github.io",
+    "section": "",
+    "text": "mkdir -p posts/2026-10-01-short-slug\n$EDITOR posts/2026-10-01-short-slug/index.qmd\nGive it title, description, date, categories and an image in the YAML header; the listing on posts/index.qmd picks it up automatically."
+  }
+]
