@@ -1,0 +1,295 @@
+---
+title: "Methods & code"
+subtitle: "How field measurements become numbers: the two models behind most of my work, running live on this page."
+title-block-banner: images/field/banner-methods.jpg
+title-block-banner-color: white
+toc: true
+toc-location: left
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(dplyr); library(tidyr); library(readr); library(plotly)
+
+pal <- c(deep = "#0e3b43", mid = "#1d7a73", moss = "#6e8c3a", ochre = "#b08b3e")
+```
+
+Two measurements carry most of what I do in the field: a sonde logging oxygen,
+pH and conductivity every few minutes, and a pulse of solute released at the
+top of a reach. Neither is interesting on its own. What makes them useful is
+the mass balance you write around them, and this page walks through those two
+balances. Every figure below is produced by the code beside it when the site
+is built.
+
+## 1. Reading metabolism off a diel oxygen curve
+
+A stream gains oxygen by photosynthesis and by exchange with the atmosphere,
+and loses it to respiration and, when supersaturated, back to the atmosphere.
+Over a reach deep $z$, that is one equation:
+
+$$
+\frac{dO_2}{dt} \;=\; \underbrace{\frac{GPP \cdot f_{PAR}(t)}{z}}_{\text{photosynthesis}}
+\;-\; \underbrace{\frac{ER}{z}}_{\text{respiration}}
+\;+\; \underbrace{k\,\bigl(O_{2,sat}(T) - O_2\bigr)}_{\text{reaeration}}
+$$
+
+Gross primary production follows light, so it appears only during the day and
+is distributed through it by the normalised light curve $f_{PAR}$. Ecosystem
+respiration runs day and night. Reaeration is the term that hides the other
+two: a well-mixed riffle exchanges gas so fast that biology barely moves the
+oxygen signal, while a slow pool amplifies the same metabolism into a wide
+daily swing. Estimating $k$ badly is the fastest way to get metabolism wrong.
+
+The figure below runs that equation forward. Drag the sliders: the daily
+amplitude responds to GPP and ER, and collapses as $k$ grows.
+
+```{r}
+#| label: metab-grid
+#| code-summary: "Forward metabolism model"
+o2_sat <- function(temp = 25) 14.652 - 0.41022 * temp +
+  0.007991 * temp^2 - 0.000077774 * temp^3
+
+diel_o2 <- function(gpp, er, k600, z = 0.25, temp = 25, dt = 1 / 96) {
+  t <- seq(0, 1, by = dt)                       # fração do dia
+  light <- pmax(0, sin(pi * (t - 0.25) / 0.5))  # nascer 6h, pôr 18h
+  light[t < 0.25 | t > 0.75] <- 0
+  f_par <- light / (sum(light) * dt)            # integra 1 no dia
+  sat <- o2_sat(temp)
+  o2 <- numeric(length(t)); o2[1] <- sat
+  for (i in 2:length(t)) {
+    d <- (gpp * f_par[i] - er) / z + k600 * (sat - o2[i - 1])
+    o2[i] <- o2[i - 1] + d * dt
+  }
+  tibble(hour = t * 24, o2 = o2, gpp = gpp, er = er, k600 = k600)
+}
+
+grid <- expand_grid(gpp = seq(2, 14, by = 2), er = seq(2, 14, by = 2),
+                    k600 = c(2, 6, 12, 24))
+# dt maior aqui só para o grid: 49 pontos por combinação mantêm a forma da
+# curva e o JSON enviado ao navegador em poucas centenas de kB.
+metab <- purrr::pmap_dfr(grid, function(gpp, er, k600)
+  diel_o2(gpp, er, k600, dt = 1 / 48))
+
+ojs_define(metab_raw = metab)
+```
+
+```{ojs}
+//| echo: false
+metab = transpose(metab_raw)
+
+viewof gpp_in = Inputs.range([2, 14], {step: 2, value: 8,
+  label: "GPP (g O₂ m⁻² d⁻¹)"})
+viewof er_in = Inputs.range([2, 14], {step: 2, value: 8,
+  label: "ER (g O₂ m⁻² d⁻¹)"})
+viewof k_in = Inputs.select([2, 6, 12, 24], {value: 6,
+  label: "k₆₀₀ (d⁻¹)"})
+
+sel = metab.filter(d => d.gpp === gpp_in && d.er === er_in && d.k600 === k_in)
+
+Plot.plot({
+  height: 300,
+  marginLeft: 55,
+  x: {label: "Hour of day", domain: [0, 24], ticks: [0, 6, 12, 18, 24]},
+  y: {label: "O₂ (mg L⁻¹)", grid: true},
+  marks: [
+    Plot.ruleY([8.24], {stroke: "#b08b3e", strokeDasharray: "4 3"}),
+    Plot.lineY(sel, {x: "hour", y: "o2", stroke: "#1d7a73", strokeWidth: 2.5})
+  ]
+})
+```
+
+The dashed line is saturation at 25 °C. When GPP and ER are equal the curve
+returns to where it started after 24 h and the reach is metabolically
+balanced; when respiration wins, the whole curve sits below saturation and the
+stream is a net source of CO~2~ to the atmosphere.
+
+## 2. Why the carbonate system moves with the oxygen
+
+In a travertine stream the same photosynthesis that produces oxygen consumes
+dissolved CO~2~. Removing CO~2~ at fixed alkalinity raises pH, which converts
+bicarbonate into carbonate, which raises the calcite saturation state
+
+$$\Omega = \frac{[\mathrm{Ca^{2+}}][\mathrm{CO_3^{2-}}]}{K_{sp}}$$
+
+and once $\Omega$ is comfortably above 1, calcite precipitates and calcium
+leaves the water. Respiration at night does the reverse. The consequence is
+that oxygen, pH and calcium in these streams are three views of one daily
+cycle, and an oxygen record alone cannot tell you how much of the carbonate
+signal is biological.
+
+The model below is the same mass balance as above with carbonate chemistry
+attached: dissolved inorganic carbon responds to metabolism and to CO~2~
+exchange with the air, pH is solved from DIC and alkalinity at each step, and
+calcite precipitates at a rate proportional to $(\Omega - 1)$, drawing down
+calcium and alkalinity.
+
+```{r}
+#| label: carbonate-model
+#| code-summary: "Coupled metabolism and carbonate model"
+K1 <- 10^-6.35; K2 <- 10^-10.33; Kw <- 1e-14; Ksp <- 10^-8.48
+
+# pH a partir de DIC e alcalinidade, por bisseção em [H+]
+solve_h <- function(dic, alk) {
+  f <- function(h) {
+    denom <- h^2 + K1 * h + K1 * K2
+    hco3 <- dic * K1 * h / denom
+    co3  <- dic * K1 * K2 / denom
+    hco3 + 2 * co3 + Kw / h - h - alk
+  }
+  lo <- 1e-12; hi <- 1e-4
+  for (i in 1:60) {
+    mid <- sqrt(lo * hi)
+    if (f(mid) > 0) lo <- mid else hi <- mid
+  }
+  sqrt(lo * hi)
+}
+
+diel_carb <- function(gpp, er = 8, z = 0.25, k600 = 6,
+                      alk0 = 4.5e-3, ca0 = 2.2e-3, dic0 = 4.8e-3,
+                      k_cal = 6, dt = 1 / 288) {
+  t <- seq(0, 1, by = dt)
+  light <- pmax(0, sin(pi * (t - 0.25) / 0.5)); light[t < 0.25 | t > 0.75] <- 0
+  f_par <- light / (sum(light) * dt)
+  sat <- o2_sat(25); co2_air <- 1.2e-5          # mol/L em equilíbrio com o ar
+
+  o2 <- dic <- alk <- ca <- ph <- omega <- numeric(length(t))
+  o2[1] <- sat; dic[1] <- dic0; alk[1] <- alk0; ca[1] <- ca0
+
+  for (i in seq_along(t)) {
+    if (i > 1) {
+      # metabolismo em mol C por litro por dia (32 g O2 = 1 mol)
+      p <- gpp * f_par[i] / (z * 32 * 1000)
+      r <- er / (z * 32 * 1000)
+      h <- solve_h(dic[i - 1], alk[i - 1])
+      co2 <- dic[i - 1] * h^2 / (h^2 + K1 * h + K1 * K2)
+      co3 <- dic[i - 1] * K1 * K2 / (h^2 + K1 * h + K1 * K2)
+      om  <- ca[i - 1] * co3 / Ksp
+      prec <- k_cal * max(0, om - 1) * 1e-4      # mol CaCO3 L-1 d-1
+
+      dic[i] <- dic[i - 1] + (r - p - prec - k600 * (co2 - co2_air)) * dt
+      alk[i] <- alk[i - 1] - 2 * prec * dt
+      ca[i]  <- ca[i - 1] - prec * dt
+      o2[i]  <- o2[i - 1] + ((gpp * f_par[i] - er) / z + k600 * (sat - o2[i - 1])) * dt
+    }
+    h <- solve_h(dic[i], alk[i])
+    ph[i] <- -log10(h)
+    co3 <- dic[i] * K1 * K2 / (h^2 + K1 * h + K1 * K2)
+    omega[i] <- ca[i] * co3 / Ksp
+  }
+  tibble(hour = t * 24, gpp = gpp, o2 = o2, ph = ph,
+         ca = ca * 1000, omega = omega)          # Ca em mmol L-1
+}
+
+carb <- purrr::map_dfr(seq(2, 14, by = 2), diel_carb)
+ojs_define(carb_raw = carb)
+```
+
+```{ojs}
+//| echo: false
+carb = transpose(carb_raw)
+
+viewof gpp_carb = Inputs.range([2, 14], {step: 2, value: 10,
+  label: "GPP (g O₂ m⁻² d⁻¹)"})
+
+csel = carb.filter(d => d.gpp === gpp_carb)
+
+panel = (y, label, colour) => Plot.plot({
+  height: 190,
+  marginLeft: 60,
+  x: {label: "Hour of day", domain: [0, 24], ticks: [0, 6, 12, 18, 24]},
+  y: {label: label, grid: true},
+  marks: [Plot.lineY(csel, {x: "hour", y: y, stroke: colour, strokeWidth: 2.5})]
+})
+
+html`<div>
+  ${panel("o2", "O₂ (mg L⁻¹)", "#1d7a73")}
+  ${panel("ph", "pH", "#0e3b43")}
+  ${panel("ca", "Ca²⁺ (mmol L⁻¹)", "#b08b3e")}
+</div>`
+```
+
+Raise GPP and the three panels move together: oxygen and pH peak in the
+afternoon, calcium falls through the day as calcite forms, and the overnight
+recovery is only partial, because the calcium that precipitated does not come
+back. That asymmetry is what a travertine reach records as rock.
+
+::: {.callout-note collapse="true"}
+## What this model is and is not
+
+Illustrative, with realistic but generic parameters: 25 °C, fixed
+temperature, one reach depth, a single first-order precipitation rate. It
+reproduces the coupling, not any particular stream. Field estimates require
+measured light, temperature, reaeration and alkalinity, and are fitted rather
+than assumed.
+:::
+
+## 3. Nutrient uptake from a slug addition
+
+Release a pulse of salt and nutrient at the top of a reach and sample at the
+bottom. The salt is conservative: whatever passes the downstream station is
+what was added, spread in time by dispersion and transient storage. The
+nutrient rides the same hydrology, so any nutrient missing relative to the
+salt was taken up by the streambed between the two stations.
+
+```{r}
+#| label: fig-btc
+#| fig-cap: "Paired breakthrough curves from one injection. Synthetic example data."
+#| code-summary: "Breakthrough curves"
+btc <- read_csv("data/example_btc.csv", show_col_types = FALSE) |>
+  mutate(cond_bg = cond_uS_cm - median(cond_uS_cm[minutes < 5]),
+         nh4_bg  = nh4_ugL  - median(nh4_ugL[minutes < 5]))
+
+plot_ly(btc, x = ~minutes) |>
+  add_lines(y = ~cond_bg, name = "Conservative tracer",
+            line = list(color = pal[["deep"]], width = 2.5)) |>
+  add_lines(y = ~nh4_bg, name = "NH₄⁺", yaxis = "y2",
+            line = list(color = pal[["moss"]], width = 2.5)) |>
+  layout(xaxis = list(title = "Minutes since injection"),
+         yaxis = list(title = "Conductivity above background (µS cm⁻¹)"),
+         yaxis2 = list(title = "NH₄⁺ above background (µg L⁻¹)",
+                       overlaying = "y", side = "right", showgrid = FALSE),
+         legend = list(orientation = "h", y = 1.1),
+         hovermode = "x unified")
+```
+
+Comparing the two curves point by point gives the uptake rate. Scaled by
+velocity and depth it becomes the quantity that lets reaches of different size
+be compared, the uptake length
+
+$$S_w = \frac{u \, h}{V_f}$$
+
+the average distance a nutrient molecule travels before being taken up. Fast
+water with a slow biofilm carries nutrients far downstream; a shallow, active
+reach retains them within metres.
+
+```{ojs}
+//| echo: false
+viewof u = Inputs.range([0.02, 0.6], {step: 0.01, value: 0.15,
+  label: "Velocity u (m s⁻¹)"})
+viewof h = Inputs.range([0.05, 0.8], {step: 0.05, value: 0.25,
+  label: "Depth h (m)"})
+viewof vf = Inputs.range([0.5, 20], {step: 0.5, value: 5,
+  label: "Uptake velocity V_f (mm min⁻¹)"})
+
+sw = u * h / (vf / 1000 / 60)
+
+html`<p style="font-size:1.1rem;margin-top:0.5rem">
+Uptake length <b>S<sub>w</sub></b> =
+<b style="color:#1d7a73">${sw.toFixed(0)} m</b>
+ · a molecule travels that far before it is taken up.
+</p>`
+```
+
+## Reproducibility
+
+Every number and figure on this page is computed when the site is built, from
+the code folded into each block. Nothing is a screenshot. The same discipline
+applies to the analyses behind the papers: raw data in, figures out, one
+command.
+
+```{r}
+#| label: session
+#| code-summary: "Session info"
+sessioninfo::session_info(pkgs = "attached")
+```

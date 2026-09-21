@@ -1,0 +1,48 @@
+name: Render and publish
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.5.57
+
+      # --- R toolchain -------------------------------------------------
+      # If you commit the _freeze/ directory (recommended: execute.freeze
+      # is set to "auto" in _quarto.yml), the runner never has to execute
+      # R code and you can delete the next three steps. Keep them if you
+      # want the site rebuilt from scratch on every push.
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Install system dependencies
+        run: sudo apt-get update && sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev libudunits2-dev libgdal-dev
+
+      - name: Restore R packages
+        uses: r-lib/actions/setup-renv@v2
+
+      # -----------------------------------------------------------------
+      - name: Render and publish to gh-pages
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

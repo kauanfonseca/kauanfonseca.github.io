@@ -1,0 +1,112 @@
+---
+title: "Methods"
+subtitle: "How the measurements are made: what I put in the water, and what comes back as data."
+title-block-banner: images/field/banner-methods.jpg
+title-block-banner-color: white
+body-classes: banner-lg banner-center
+toc: true
+toc-location: left
+---
+
+Most questions in stream ecology can be attacked from more than one direction,
+and the directions disagree in instructive ways. A whole reach integrates
+everything happening in it but hides who did what; a chamber isolates one
+patch of streambed but changes the flow over it. I use both, and the same
+applies to nutrients, where a pulse and a steady drip answer different
+questions about the same biofilm.
+
+## Ecosystem metabolism
+
+![A benthic chamber before deployment: transparent walls, internal circulation and a logging probe.](images/methods/chamber-closeup.jpg){.side-figure}
+
+**Open-channel.** A multiparameter sonde logs dissolved oxygen, temperature,
+pH and conductivity every few minutes for several days. Photosynthesis,
+respiration and gas exchange with the atmosphere are then separated from the
+shape of the daily oxygen curve. The estimate covers the whole reach,
+including the hyporheic zone and patches nobody would think to sample, which
+is its strength; its weakness is that reaeration must be estimated well or the
+biology is swamped by it.
+
+**Benthic chambers.** Sealed transparent chambers enclose a known area of
+streambed, with light and dark incubations giving net production and
+respiration separately, and on substrates chosen on purpose: travertine crust,
+loose cobble, sand, macrophyte. A chamber answers *which patch does what*,
+which the reach-scale estimate cannot, at the cost of altering flow and
+turbulence inside it.
+
+![Chamber arrays incubating on the streambed, paired light and dark.](images/methods/chamber-array.jpg){.side-figure-left}
+
+Running both in the same reach is the useful part. When the sum of the patches
+matches the open-channel estimate, the budget closes; when it does not, the
+difference is itself a result, pointing to a compartment that was not sampled
+or to gas exchange being off.
+
+## Nutrient uptake
+
+![Setting up the downstream station before a pulse addition.](images/methods/slug-station.jpg){.side-figure}
+
+**Pulse (slug) additions.** A single release of a conservative tracer together
+with nutrient, sampled intensively downstream. Fast, cheap, and tolerant of
+remote sites with no power. The reach sees a transient pulse of concentration
+well above ambient, so what is measured is uptake under enrichment, not at
+background.
+
+**Constant-rate (drip) additions.** Tracer and nutrient dripped at a steady
+rate until the reach reaches a plateau. This holds the enrichment constant
+while the biofilm equilibrates, which makes the uptake estimate cleaner and
+lets several enrichment levels be compared to describe the saturation curve.
+It costs hours of pumping, carboys of solution and a team.
+
+![Incubation trays in the streambed during an addition.](images/methods/incubation-tray.jpg){.side-figure-left}
+
+Both are paired with water chemistry: filtered aliquots for ammonium, nitrate,
+soluble reactive phosphorus, alkalinity and calcium, preserved in the field and
+kept cold until analysis.
+
+## Consumers
+
+![Excretion incubation: a fish held in a bag of filtered stream water while nutrients accumulate.](images/methods/excretion-bag.jpg){.side-figure}
+
+**Excretion assays.** Individual animals are held briefly in a known volume of
+filtered stream water; the nutrients that accumulate give per-individual
+excretion rates of nitrogen and phosphorus, and the N:P ratio of what they
+release. Body mass and taxon are recorded, because both govern the rate.
+
+**Community density and biomass.** Excretion per individual becomes an
+ecosystem flux only when multiplied by how many individuals are there. Fish
+assemblages are surveyed by seining and by underwater counts along fixed
+transects; molluscs and other benthic consumers are counted and measured in
+quadrats. Aggregations are mapped rather than averaged away, since that is
+where the biogeochemical hotspots are.
+
+![Seining a reach to estimate fish density and biomass.](images/methods/seine-net.jpg){.side-figure-left}
+
+![Measuring bivalves for biomass and excretion scaling.](images/methods/mollusc-measure.jpg){.side-figure}
+
+Scaling the two together turns a physiological measurement into a term in the
+nutrient budget of the reach, which is what makes consumer-driven recycling
+comparable with uptake by the streambed.
+
+## Water chemistry and habitat
+
+![Water sampling and field measurements along a reach.](images/methods/water-sampling.jpg){.side-figure-left}
+
+Discharge by dilution gauging or velocity-area, reach geometry, canopy cover
+and substrate composition, alkalinity and calcium for the carbonate system,
+and nutrient aliquots filtered and preserved on site. None of this is glamorous
+and all of it decides whether the rest of the numbers mean anything.
+
+## Biomonitoring
+
+In consultancy work the same toolkit is used under a different contract:
+phytoplankton and zooplankton, benthic macroinvertebrates, fish assemblages
+and water quality, sampled under QA/QC and sample-traceability protocols, with
+indicators computed for environmental licensing.
+
+::: {.callout-note}
+## Models and interactive examples
+
+The modelling side of this work, the diel oxygen mass balance, the coupled
+carbonate system and breakthrough-curve deconvolution, is being written up as
+a separate set of interactive pages.
+:::

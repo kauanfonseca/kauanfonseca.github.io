@@ -1,0 +1,69 @@
+---
+title: "Publications"
+subtitle: "Peer-reviewed articles and research software."
+title-block-banner: images/field/banner-publications.jpg
+title-block-banner-color: white
+body-classes: banner-md banner-center
+toc: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(dplyr)
+library(readr)
+library(glue)
+library(htmltools)
+```
+
+Talks, posters and work in preparation are on the [CV](cv.qmd).
+
+```{r}
+#| label: pub-list
+#| code-summary: "Render the list from CSV"
+#| output: asis
+pubs <- read_csv("data/publications.csv", show_col_types = FALSE) |>
+  arrange(desc(year), type, title)
+
+render_group <- function(df, heading) {
+  if (nrow(df) == 0) return(invisible(NULL))
+  cat("\n## ", heading, "\n\n", sep = "")
+  for (i in seq_len(nrow(df))) {
+    r <- df[i, ]
+    link <- if (!is.na(r$link) && nzchar(r$link)) {
+      glue("[{r$link_label}]({r$link}){{.tag}}")
+    } else ""
+    cat(glue(
+      "::: {{.line}}\n",
+      "### {r$title}\n",
+      "{r$authors}. *{r$venue}* ({r$year}).\n\n",
+      "[{r$status}]{{.tag}} {link}\n",
+      ":::\n\n"
+    ))
+  }
+}
+
+render_group(filter(pubs, type == "Article"),  "Peer-reviewed articles")
+```
+
+## Software
+
+### StreamLog
+
+A single-file HTML logger for multiparameter sonde readings in the field:
+range checks as you type, CSV export, and no dependency on signal, battery-
+hungry apps or a laptop. It runs offline in any browser, including a phone
+held over a stream.
+
+[Open in a new tab](https://kauanfonseca.github.io/streamlog/){.tag}
+[Source code](https://github.com/kauanfonseca/streamlog){.tag}
+[10.5281/zenodo.22784736](https://doi.org/10.5281/zenodo.22784736){.tag}
+[MIT licence]{.tag}
+
+::: {.app-embed}
+<iframe src="https://kauanfonseca.github.io/streamlog/" loading="lazy"
+        title="StreamLog running live"></iframe>
+:::
+
+The version above is live, not a screenshot: type a reading and it validates.
+Nothing you enter here is stored anywhere.

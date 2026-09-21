@@ -1,0 +1,47 @@
+---
+title: "About me"
+title-block-banner: images/field/banner-about.jpg
+title-block-banner-color: white
+toc: true
+---
+
+<!-- PENDENTE (nota interna, não aparece na página):
+Falta: coordenadas de Bauxi, do Parque Sesc Serra Azul e da UFMT em
+`data/region.csv`; o shapefile da bacia em `data/gis/` (opcional); e o
+terceiro parágrafo de trajetória.
+-->
+
+
+## Background
+
+I hold a PhD in Ecology and Evolution from the Universidade do Estado do Rio
+de Janeiro (UERJ), Brazil. My dissertation dealt with karst streams in the
+Brazilian savanna, in Mato Grosso (see map below), where I investigated how biodiversity modulates the structure and functioning of these ecosystems. I have also worked on environmental consultancy projects in the Amazon and Atlantic Forest regions, evaluating the effects of mining and hydropower development on aquatic communities. I am currently an associate fellow at the Instituto Nacional de Pesquisas do Pantanal (INPP), supported by a CNPq PCI-DB fellowship, and a postdoctoral researcher at UERJ.
+
+### Where I worked
+
+{{< include _map-region.qmd >}}
+
+<!-- TODO: anos do doutorado, orientador(a), e mestrado/graduação -- o cv.qmd
+     ainda traz "University, Brazil" e "Advisor: [name]" do esqueleto. -->
+
+## Research interests
+
+- Structure and functioning of aquatic and freshwater ecosystems
+- Carbon and nutrient cycling, and the role of organisms in driving it
+- Karst aquatic ecosystems and calcium carbonate precipitation
+- Stream ecosystem responses to environmental change
+- Field campaigns paired with manipulative experiments
+
+<!-- TODO: incluir (ou não) os itens mais metodológicos: metabolismo de
+     ecossistemas lóticos, sensores de alta frequência, adições de soluto,
+     biomonitoramento aquático. -->
+
+## Where I want to take this
+
+Two directions I want to build toward: long-term monitoring of the streams I
+currently sample campaign by campaign, and scaling the questions beyond single
+catchments.
+
+<!-- TODO: reescrever nas suas palavras, ou cortar. Está aqui como intenção
+     declarada, não como algo que você já faz. -->

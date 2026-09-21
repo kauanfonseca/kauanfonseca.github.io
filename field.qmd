@@ -1,0 +1,101 @@
+---
+title: "Field"
+subtitle: "The rivers, the landscapes and the fieldwork behind the data."
+title-block-banner: images/field/banner-field.jpg
+title-block-banner-color: white
+body-classes: banner-md banner-center
+toc: false
+---
+
+```{r}
+#| label: gallery-data
+#| echo: false
+#| warning: false
+library(readr); library(dplyr)
+
+caps <- read_csv("images/field/captions.csv", show_col_types = FALSE) |>
+  mutate(path = file.path("images/field", file)) |>
+  filter(file.exists(path)) |>
+  mutate(across(everything(), ~ ifelse(is.na(.x), "", as.character(.x))))
+
+ojs_define(photos_raw = caps)
+```
+
+```{ojs}
+//| echo: false
+photos = transpose(photos_raw)
+
+categories = ["All", ...new Set(photos.map(d => d.category).filter(d => d))]
+
+viewof cat = Inputs.radio(categories, {value: "All", label: "Show"})
+viewof query = Inputs.search(photos, {
+  placeholder: "Search captions, sites…",
+  columns: ["caption", "site", "year"],
+  label: "Filter"
+})
+
+shown = query.filter(d => cat === "All" || d.category === cat)
+```
+
+```{ojs}
+//| echo: false
+viewof opened = {
+  const wrap = html`<div></div>`;
+  let current = null;
+
+  const legend = d => [d.caption, d.site, d.year].filter(x => x && x !== "TODO")
+    .join(" · ");
+
+  const overlay = html`<div class="photo-overlay" style="display:none">
+    <button class="photo-close" title="Close">&times;</button>
+    <button class="photo-prev" title="Previous">&#8249;</button>
+    <button class="photo-next" title="Next">&#8250;</button>
+    <figure><img src=""><figcaption></figcaption></figure>
+  </div>`;
+
+  const img = overlay.querySelector("img");
+  const cap = overlay.querySelector("figcaption");
+
+  function show(i) {
+    current = (i + shown.length) % shown.length;
+    const d = shown[current];
+    img.src = d.path;
+    cap.textContent = legend(d);
+    overlay.style.display = "flex";
+  }
+  function hide() { overlay.style.display = "none"; current = null; }
+
+  overlay.querySelector(".photo-close").onclick = hide;
+  overlay.querySelector(".photo-prev").onclick = e => { e.stopPropagation(); show(current - 1); };
+  overlay.querySelector(".photo-next").onclick = e => { e.stopPropagation(); show(current + 1); };
+  overlay.onclick = e => { if (e.target === overlay) hide(); };
+  d3.select(document.body).on("keydown.gallery", e => {
+    if (current === null) return;
+    if (e.key === "Escape") hide();
+    if (e.key === "ArrowRight") show(current + 1);
+    if (e.key === "ArrowLeft") show(current - 1);
+  });
+
+  const grid = html`<div class="photo-grid">
+    ${shown.map((d, i) => {
+      const fig = html`<figure>
+        <img src="${d.path}" alt="${d.caption}" loading="lazy">
+        <figcaption>${legend(d)}</figcaption>
+      </figure>`;
+      fig.onclick = () => show(i);
+      return fig;
+    })}
+  </div>`;
+
+  wrap.append(grid, overlay);
+  wrap.value = null;
+  return wrap;
+}
+```
+
+```{ojs}
+//| echo: false
+html`<p class="figure-caption">${shown.length} of ${photos.length} photographs.
+Click any image to open it; use the arrow keys to move through the set.<br>
+All photographs © Kauan Fonseca. Please ask before reusing them.</p>`
+```

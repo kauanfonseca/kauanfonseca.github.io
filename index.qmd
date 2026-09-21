@@ -1,0 +1,45 @@
+---
+title: "Kauan Fonseca"
+subtitle: "Ecosystem ecologist"
+title-block-banner: images/field/banner-home.jpg
+title-block-banner-color: white
+about:
+  id: hero
+  template: trestles
+  image: images/profile.jpg
+  image-shape: rounded
+  image-width: 16em
+  links:
+    - icon: person-badge
+      text: ORCID
+      href: https://orcid.org/0000-0003-4728-4883
+    - icon: file-earmark-text
+      text: Lattes
+      href: http://lattes.cnpq.br/8766670248298603
+    - icon: github
+      text: GitHub
+      href: https://github.com/kauanfonseca
+    - icon: envelope
+      text: Contact
+      href: mailto:n.kauan@gmail.com
+---
+
+::: {#hero}
+I am an ecosystem ecologist interested in the biotic and environmental factors that control the structure and functioning of ecosystems, especially aquatic and freshwater ones. I work at the reach and catchment scale, combining field campaigns with manipulative experiments to evaluate how streams respond to environmental change.
+
+I work on carbon and nutrient cycling and on the role of organisms in driving these processes, with a particular interest in karst aquatic ecosystems --- where calcium carbonate precipitates --- and in how organisms affect, and are affected by, these systems.
+:::
+
+## Where to go from here
+
+|  |  |
+|----|----|
+| [About](about.qmd) | Background, research interests and where the work happens |
+| [Research](research.qmd) | Projects, study region, groups and collaborations |
+| [Field](field.qmd) | Photographs from the streams and the fieldwork |
+| [Publications](publications.qmd) | Peer-reviewed articles and software |
+| [Teaching](teaching.qmd) | Courses, mentorship and outreach |
+| [CV](cv.qmd) | Academic and consulting CV, Lattes |
+| [Contact](contact.qmd) | Email, academic profiles and collaboration |
+
+: {.striped tbl-colwidths="\[28,72\]"}

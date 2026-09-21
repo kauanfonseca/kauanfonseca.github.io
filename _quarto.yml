@@ -1,0 +1,92 @@
+project:
+  type: website
+  output-dir: _site
+  # A galeria monta as <img> no navegador, então o Quarto não enxerga essas
+  # imagens como recursos do documento e não as copia para _site/.
+  # Declará-las aqui força a cópia. images/web/ fica de fora de propósito.
+  resources:
+    - cv/**
+    - images/field/**
+    - images/research/**
+    - images/teaching/**
+    - images/logos/**
+    - images/profile.jpg
+    - images/favicon.png
+  preview:
+    port: 4200
+
+execute:
+  # freeze: auto cacheia os resultados em _freeze/. Cuidado: o cache NÃO
+  # enxerga mudanças em arquivos incluídos com {{< include >}} nem em CSV
+  # lidos pelos chunks -- se editar _map-*.qmd ou data/*.csv e o site não
+  # mudar, apague _freeze/. Mantido desligado enquanto o site está em
+  # construção; religue antes de publicar, para o Actions não precisar de R.
+  freeze: false
+  echo: false       # o código não aparece nas páginas; ele vive no repositório
+  warning: false
+  message: false
+
+website:
+  title: "Kauan Fonseca"
+  description: "Ecosystem ecology of aquatic and freshwater systems: carbon and nutrient cycling, karst streams, and the organisms that drive them."
+  site-url: "https://kauanfonseca.github.io"
+  repo-url: "https://github.com/kauanfonseca/kauanfonseca.github.io"
+  favicon: images/favicon.png
+  open-graph: true
+  search:
+    location: navbar
+    type: overlay
+  navbar:
+    pinned: true
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: research.qmd
+        text: Research
+      - href: field.qmd
+        text: Field
+      - href: publications.qmd
+        text: Publications
+      - href: teaching.qmd
+        text: Teaching
+      - href: cv.qmd
+        text: CV
+      - href: contact.qmd
+        text: Contact
+    right:
+      - icon: github
+        href: https://github.com/kauanfonseca
+        aria-label: GitHub
+  page-footer:
+    border: true
+    left: "&copy; 2026 Kauan Fonseca &middot; Rio de Janeiro, Brazil"
+    center:
+      - icon: github
+        href: https://github.com/kauanfonseca
+        aria-label: GitHub
+      - icon: envelope
+        href: mailto:n.kauan@gmail.com
+        aria-label: Email
+    right: "Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - styles.scss
+    toc: true
+    toc-depth: 3
+    code-overflow: wrap
+    highlight-style: arrow
+    fig-width: 8
+    fig-height: 4.5
+    fig-format: svg
+    link-external-newwindow: true
+    anchor-sections: true
+    citations-hover: true
+    smooth-scroll: true
+
+bibliography: references.bib
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/limnology-and-oceanography.csl

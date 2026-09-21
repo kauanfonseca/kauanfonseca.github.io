@@ -1,0 +1,13 @@
+---
+title: "Field notes"
+subtitle: "Short pieces on methods, code and things that went wrong in the field."
+listing:
+  contents: "*/index.qmd"
+  type: default
+  sort: "date desc"
+  categories: true
+  feed: true
+  fields: [date, title, description, categories, reading-time]
+page-layout: full
+title-block-banner: false
+---

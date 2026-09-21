@@ -1,0 +1,17 @@
+Fotos que acompanham os temas de pesquisa (uma por projeto).
+
+Originais em images/originals/ -> rode tools/prep-images.py -> escolha e
+copie para cá com nome descritivo, por exemplo:
+
+  metabolism.jpg        travertino, sonda, cachoeira
+  nutrients.jpg         adição de soluto, seringa, coleta
+  consumers.jpg         peixes, cardume, agregação
+  biomonitoring.jpg     campo de consultoria, triagem, equipamento
+
+No .qmd, logo DEPOIS do título do projeto:
+
+  ![Legenda curta](images/research/metabolism.jpg){.side-figure}
+
+A imagem fica à direita, com o texto correndo ao lado; no celular ela passa
+para cima do texto, em largura total. Use .side-figure-left para inverter.
+Formato ideal: retrato ou quadrado, lado maior 1200 px basta.

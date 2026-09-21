@@ -1,0 +1,47 @@
+---
+title: "How this site is built"
+description: >
+  Quarto, R, Plotly and Observable JS, rendered by GitHub Actions and served
+  from GitHub Pages. No server, no database, every figure reproducible from
+  the source in the repository.
+date: 2026-09-17
+categories: [quarto, R, reproducibility]
+draft: false
+---
+
+Academic pages are usually a PDF CV and a list of links. This one is a Quarto
+project: the same toolchain I use for analysis reports, pointed at a website.
+The practical consequence is that a figure here is never a screenshot — it is
+code that runs at build time, and if the underlying data changes, the figure
+changes with the next push.
+
+## The stack
+
+| Layer | Tool | Why |
+|-------|------|-----|
+| Content | Quarto `.qmd` | Markdown plus executable R chunks |
+| Analysis | R, tidyverse | The language the actual work is done in |
+| Interactive figures | Plotly, Leaflet, DT | Zoom, hover and layers without a server |
+| Client-side interaction | Observable JS | Sliders that recompute in the browser |
+| Build | GitHub Actions | Renders on every push to `main` |
+| Hosting | GitHub Pages | Static, free, versioned |
+
+## The part worth copying
+
+`execute: freeze: auto` in `_quarto.yml` caches chunk results in `_freeze/`.
+Commit that directory and the build runner never has to install R or restore
+packages: it serves the cached output and renders the HTML. Builds drop from
+several minutes to a few seconds, and a package update upstream cannot
+silently change a published figure.
+
+The trade-off is that you re-render locally when data changes, and commit the
+cache along with the code. For a site whose figures come out of a dissertation
+pipeline, that is the right direction: the published version should change
+when I decide it changes, not when CRAN does.
+
+## Client-side, not Shiny
+
+Shiny needs a server. Observable JS does not: `ojs_define()` writes an R object
+into the page as JSON, and the browser does the rest. Every interactive control
+on the [Research](../../research.qmd) page works from a static file, which is
+why the whole site fits on GitHub Pages at no cost.

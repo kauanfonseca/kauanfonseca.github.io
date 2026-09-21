@@ -1,0 +1,93 @@
+---
+title: "Contact"
+subtitle: "Email, academic profiles and where I work."
+toc: false
+---
+
+## Write to me
+
+::: {.contact-box}
+The quickest route is email. Fill this in and pick how you want to send it:
+nothing is stored on this site and no third party sees the message.
+
+```{=html}
+<div class="contact-form">
+  <label>Subject
+    <input id="cf-subject" type="text" placeholder="What is this about?">
+  </label>
+  <label>Message
+    <textarea id="cf-body" rows="6"
+      placeholder="Datasets, collaborations, questions about the code…"></textarea>
+  </label>
+  <div class="contact-actions">
+    <button id="cf-mail" type="button">Open in my mail app</button>
+    <button id="cf-gmail" type="button" class="secondary">Open in Gmail</button>
+    <button id="cf-copy" type="button" class="secondary">Copy address</button>
+  </div>
+  <p id="cf-status" class="cf-status" role="status"></p>
+</div>
+
+<script>
+(function () {
+  const to = "n.kauan" + "@" + "gmail.com";
+  const get = id => document.getElementById(id);
+  const subject = () => encodeURIComponent(get("cf-subject").value || "");
+  const body = () => encodeURIComponent(get("cf-body").value || "");
+  const say = msg => { get("cf-status").textContent = msg; };
+
+  get("cf-mail").addEventListener("click", () => {
+    window.location.href =
+      `mailto:${to}?subject=${subject()}&body=${body()}`;
+    say("If nothing opened, this browser has no mail app set up. Use Gmail or copy the address.");
+  });
+
+  get("cf-gmail").addEventListener("click", () => {
+    window.open(
+      `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject()}&body=${body()}`,
+      "_blank", "noopener");
+  });
+
+  get("cf-copy").addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(to);
+      say("Address copied: " + to);
+    } catch (e) {
+      say("Address: " + to);
+    }
+  });
+})();
+</script>
+```
+
+Or write directly to [n.kauan@gmail.com](mailto:n.kauan@gmail.com).
+:::
+
+## Academic profiles
+
+| | |
+|--------|------|
+| ORCID | [0000-0003-4728-4883](https://orcid.org/0000-0003-4728-4883) |
+| Lattes | [lattes.cnpq.br/8766670248298603](http://lattes.cnpq.br/8766670248298603) |
+| GitHub | [kauanfonseca](https://github.com/kauanfonseca) |
+
+: {.striped tbl-colwidths="[28,72]"}
+
+<!-- TODO: Google Scholar e ResearchGate -- me passe os links ou deixe fora. -->
+
+## Where I work
+
+Postdoctoral researcher at the LERC, Stream Ecology Lab, Department of
+Ecology, Universidade do Estado do Rio de Janeiro (UERJ), Rio de Janeiro, and
+associate fellow at the Instituto Nacional de Pesquisa do Pantanal (INPP).
+
+## Collaboration
+
+I am open to collaboration across aquatic ecology and biogeochemistry, and
+happy to be approached about work that sits outside what is described on this
+site. Stream metabolism, solute additions, consumer-driven nutrient recycling
+and biomonitoring are where I can contribute most quickly, but a dataset
+nobody has had time to analyse, a method that needs a second pair of eyes, or
+an idea at the stage of a conversation are all welcome.
+
+Suggestions about the site itself are welcome too, including where it is
+unclear or wrong.

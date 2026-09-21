@@ -1,0 +1,86 @@
+---
+title: "Curriculum vitae"
+subtitle: "Academic and consulting versions, kept up to date."
+date: last-modified
+date-format: "[Updated] MMMM YYYY"
+toc: true
+---
+
+::: {.cv-links}
+**[Academic CV (PDF)](cv/kauan-fonseca-cv-academic.pdf)** ·
+**[Consulting CV (PDF)](cv/kauan-fonseca-cv-consulting.pdf)** ·
+**[Plataforma Lattes](http://lattes.cnpq.br/8766670248298603)**
+:::
+
+<!-- TODO: se quiser as versões vivas do Drive além dos PDFs, cole os links
+     aqui, com compartilhamento em "qualquer pessoa com o link pode VER". -->
+
+<!-- PENDENTE (nota interna, não aparece na página):
+Falta: os dois links do Drive na linha acima.
+-->
+
+## Education
+
+::: {.timeline}
+::: {.entry}
+[2021 -- 2026]{.when}
+
+**PhD, Ecology and Evolution** --- Universidade do Estado do Rio de Janeiro (UERJ).
+Advisor: Dr. Eugenia Zandonà.
+:::
+
+::: {.entry}
+[2019 -- 2021]{.when}
+
+**MSc, Biodiversity (Ecology)** --- Universidade Federal do Estado do Rio de Janeiro (UNIRIO).
+Advisor: Dr. Timothy P. Moulton.
+:::
+
+::: {.entry}
+[2015 -- 2019]{.when}
+
+**BSc, Biological Sciences** --- Universidade Federal de Mato Grosso (UFMT).
+Undergraduate advisor: Dr. Cassia Yano.
+:::
+:::
+
+## Awards and funding
+
+| Year | Award |
+|------|-------|
+| 2025 | Endowment Award, Society for Freshwater Science (USD 2,000) |
+| 2024 | CAPES-PrInt fellowship for a research stay abroad (USD 21,400) |
+| 2024 | Stoich Project Travel Award (USD 1,000) |
+| 2023 | Conference on Biological Stoichiometry Travel Award (USD 2,000) |
+| 2022 | American Fund Award, Society for Freshwater Science (USD 1,500) |
+
+: {.striped tbl-colwidths="[12,88]"}
+
+## Service and membership
+
+- International Coordination Committee (ICC), Society for Freshwater Science.
+- Member, Society for Freshwater Science; Association for the Sciences of
+  Limnology and Oceanography.
+
+## Technical skills
+
+| Area | Tools |
+|------|-------|
+| Analysis | R: tidyverse, data wrangling, statistics |
+| Ecosystem modelling | `streamMetabolizer`, `LakeMetabolizer`, PHREEQC |
+| Inverse and transport modelling |  `ReacTran`, `deSolve`, `FME` |
+| Spatial | `sf` |
+| Visualisation | ggplot2, plotly, leaflet |
+| Reporting | Quarto, R Markdown, LaTeX |
+| Workflow | Git, GitHub, GitHub Pages and Actions |
+| Spreadsheets | Excel, including validation and reporting workflows |
+
+: {.striped tbl-colwidths="[24,76]"}
+
+<!-- TODO: acrescentar o que faltar. Continuam fora, por falta de confirmação:
+     seacarb, terra, QGIS, Google Earth Engine, Shiny, Docker, renv, Python,
+     SQL, targets, brms/Stan. -->
+
+## Languages
+
+Portuguese (native) &middot; English (B2) &middot; Spanish (A1)
