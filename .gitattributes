@@ -1,0 +1,2 @@
+# O utilitário de imagens não deve pesar nas estatísticas de linguagem
+tools/* linguist-vendored

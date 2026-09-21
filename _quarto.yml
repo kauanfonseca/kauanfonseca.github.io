@@ -12,6 +12,7 @@ project:
     - images/logos/**
     - images/profile.jpg
     - images/favicon.png
+    - "!**/.DS_Store"
   preview:
     port: 4200
 
